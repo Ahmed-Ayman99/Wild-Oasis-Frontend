@@ -7,8 +7,8 @@ import Input from "../../ui/Input";
 import useLogin from "./useLogin";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("ahmed@gmail.com");
+  const [password, setPassword] = useState("pass1234");
 
   const { login, isLogIn } = useLogin();
 
