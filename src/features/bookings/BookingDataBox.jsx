@@ -11,7 +11,6 @@ import DataItem from "../../ui/DataItem";
 import { Flag } from "../../ui/Flag";
 
 import { formatDistanceFromNow, formatCurrency } from "../../utils/helpers";
-import { BE_URL_Img } from "../../utils/constants";
 
 const StyledBookingDataBox = styled.section`
   background-color: var(--color-gray-0);
@@ -142,10 +141,7 @@ const BookingDataBox = ({ booking }) => {
       <Section>
         <Guest>
           {countryFlag && (
-            <Flag
-              src={`${BE_URL_Img}/${countryFlag}`}
-              alt={`Flag of ${nationality}`}
-            />
+            <Flag src={countryFlag} alt={`Flag of ${nationality}`} />
           )}
           <p>
             {fullName} {numGuests > 1 ? `+ ${numGuests - 1} guests` : ""}
